@@ -1,0 +1,18 @@
+{
+  "name": "aws-lambda-ec2-start-stop",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm *.zip; zip -r ec2-start-stop.zip index.js node_modules",
+    "clean": "rm *.zip",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "oppara",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^2.0.1",
+    "aws-sdk": "^2.4.9",
+    "moment": "^2.14.1"
+  }
+}

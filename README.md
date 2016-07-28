@@ -24,6 +24,29 @@ Lambda用のロールにアタッチするポリシーの例
 }
 ```
 
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "logs:CreateLogGroup",
+            "Resource": "arn:aws:logs:ap-northeast-1:XXXXXXXXXXXX:*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": [
+                "arn:aws:logs:ap-northeast-1:XXXXXXXXXXXX:log-group:/aws/lambda/ec2-start-stop:*"
+            ]
+        }
+    ]
+}
+```
+
 ## 設定
 
 ```

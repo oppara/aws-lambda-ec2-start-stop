@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rm *.zip; zip -r ec2-start-stop.zip index.js node_modules",
+    "build": "rm -rf ec2-start-stop.zip node_modules && npm i --production && zip -qr ec2-start-stop.zip index.js lib node_modules && npm i",
     "clean": "rm *.zip",
     "test": "mocha"
   },
